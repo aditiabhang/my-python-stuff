@@ -1,3 +1,4 @@
+##------ LISTS ------ 
 courses = ['Algorithms and Data Analysis', 'Software Quality', 'Formal Languages', 'Python Self Study']
 print("Printing the list: ",courses)
 print("Printing the length of the list: ",len(courses))
@@ -102,4 +103,69 @@ print(courses_str1)
 # split() -
 # - splits the list separated by a certain value
 courses_str2 = courses_str.split('-')       #this has to be done on join
-print(courses_str2)  
+print(courses_str2) 
+print("") 
+
+## ------ TUPLES ------
+# - Lists are mutable but tuples are NOT mutable
+# Proof: lists are mutable
+print("Lists are mutable.")
+list1 = ['Amazon', 'IBM', 'Facebook', 'Google']
+list2 = list1
+print (list2)
+list1[0] = 'Apple'
+print("List 1: ", list1)
+print("List 2: ",list2)
+print("")
+# If we want to update/change the object, we use lists. Hence, mutable.
+
+# Proof: tuples are not mutable
+print("Tuples are immutable.")
+tuple1 = ('Amazon', 'IBM', 'Facebook', 'Google')
+tuple2 = tuple1
+print (tuple2)
+# tuple1[0] = 'Apple'
+print("Tuple 1: ", tuple1)
+print("Tuple 2: ", tuple2)
+print("When we try to change the tuple like we did in the lists above, we get the above error.")
+print("")
+
+# Difference between lists and tuple:
+# - we cant append, insert, or remove any elements in a tuple, like we can do it list.
+# Other than this difference, list and tuple behaves the same.
+# We can loops through lists and tuples, access the elements, etc. 
+
+## ------ SETS ------
+# Sets are sets of ordered or unordered values, has no duplicates.
+# Has curly braces.
+# Every time we print a set, it is displayed in different order.
+# Bcz, sets dont care about the order, it is mainly used to see if the value is a part of
+# a set, also used to remove duplicate values.
+
+set1 = {'Amazon', 'IBM', 'Google', 'Facebook', 'Facebook'}
+# When we print a set with duplicate values, the duplicate value will be thrown away, and
+# display only one value. 
+print(set1)
+
+# Membership test - checks if a value is part of the set.
+# Sets performs this better than lists or tuples
+print(" Is Amazon in set1?", 'Amazon' in set1)
+
+# Sets determine what values they share or dont share with other sets
+# intersection() - determines the common.
+set2 = {'Amazon', 'Facebook', 'Intel', 'Dell'}
+print("Intersection of sets: ", set1.intersection(set2))
+# difference() - What is in set1 but not in set2?
+print("Difference: ", set1.difference(set2))
+# union() - combine all the values in both sets
+print("Union: ", set1.union(set2))
+
+# Tip: Creatig empty set of lists, tuples and sets.
+empty_list = []
+empty_list = list[]
+
+empty_tuple = ()
+empty_tuple = tuple()
+
+empty_set = ()  # this is not correct. It creates an empty dictionary
+empty_set = set()
