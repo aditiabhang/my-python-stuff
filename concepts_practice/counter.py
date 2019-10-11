@@ -67,3 +67,11 @@ print("Addition: ", counter1 + counter2)
 print("Substraction: ", counter2 - counter1)
 print("Intersection: ", counter1 & counter2)
 print("Union: ", counter1 | counter2)
+
+dictonary = {'a': 3, 'i': 3, 'd': 1, 't': 1, 'm': 1}
+for keys, values in dictonary.items():
+    # print(keys, values)
+    if values > 1:
+        print ("Yes")
+    else:
+        print("No")
