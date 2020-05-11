@@ -80,7 +80,7 @@ They can't be called on values such as strings or integers.****
         [1, 3, 6, 9]
 
   - sort in reverse order. 
-            
+
             >>> spam.sort(reverse=True)
             >>> spam
             ['Namaste', 'Hi', 'Hey', 'Hello']
@@ -111,8 +111,8 @@ Variables don't contain lists, they contain references to lists.
 - Changes made to a list in a function will affect the list outside the function.
 - The \ line continuation character can be used to stretch Python instruction across multiple lines.
 
-***Note: 
-        
+Note: 
+
         import copy
         copy_spam = copy.deepcopy(spam) 
         # makes an entire new copy instead of referencing.
