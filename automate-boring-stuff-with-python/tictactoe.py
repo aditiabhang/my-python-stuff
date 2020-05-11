@@ -1,3 +1,5 @@
+# this code is just a display of dictionary data structure
+
 theBoard = {'top-L': 'O ', 'top-M': 'O ', 'top-R': 'O ',
             'mid-L': '  ', 'mid-R': 'X ', 'mid-M': '  ',
             'low-L': '  ', 'low-R': '  ', 'low-M': 'X '}
