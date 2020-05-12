@@ -12,7 +12,7 @@
 
 ### String Methods
 
-- Strings methods are mutable, meaning the string methods can be modief in place.
+- Strings methods are mutable, meaning the string methods can be modied in place.
 - 
 ‘Hello world'.split() returns a list of strings split from the string it's called on.
 rjust() ,ljust(), center() returns a string padded with spaces.
@@ -85,3 +85,8 @@ Pyperclip has copy() and paste() functions for getting and putting strings on th
         >>> name = 'Manacaaaa'
         >>> name.replace('c','k')
         'Manakaaaa'
+
+### String Formatting
+
+        >>> "Hello %s! I am having %s on %s at %s. Please bring your own %s. See you on %s !" % (name, party, party_date, place, Food, party_date)
+        'Hello Ramesh Suresh and Gang! I am having Birthday Party on 28th June at 369th Street, Happiville. Please bring your own Booze. See you on 28th June !'
