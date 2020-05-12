@@ -90,3 +90,20 @@ Pyperclip has copy() and paste() functions for getting and putting strings on th
 
         >>> "Hello %s! I am having %s on %s at %s. Please bring your own %s. See you on %s !" % (name, party, party_date, place, Food, party_date)
         'Hello Ramesh Suresh and Gang! I am having Birthday Party on 28th June at 369th Street, Happiville. Please bring your own Booze. See you on 28th June !'
+
+----------------------------------------------------
+### Running program outside IDLE
+
+- The shebang line tells your computer that you want to run the script using Python 3.
+
+- On Windows, you can bring up the Run dialog by pressing Win+R.
+
+- A batch file can save you a lot typing by running multiple commands.
+
+- The batch files you'll make will look like this:
+       
+        @py C:\Users\Al\MyPytonScripts\hello.py %*
+        @pause
+
+- You'll need to add the MyPythonScripts folder to the PATH environment variable first.
+Command-line arguments can be read in the sys.argv list. (Import the sys module first.)
