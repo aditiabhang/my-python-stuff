@@ -130,3 +130,37 @@
         >>> vowelRegex = re.compile(r'[aeiou]', re.I)
         >>> vowelRegex.findall('Why does this course talking so much about All robocop')
         ['o', 'e', 'i', 'o', 'u', 'e', 'a', 'i', 'o', 'u', 'a', 'o', 'u', 'A', 'o', 'o', 'o']
+---------------------------------------------------------
+### Sub() method and Verbose:
+
+- The sub() regex method will substitute matches with some other text.
+
+        >>> import re
+        >>> namesRegex = re.compile(r'Agent \w+')
+        >>> namesRegex.findall("Agent Alice gave all the documents to Agent Bob.")
+        ['Agent Alice', 'Agent Bob']
+
+        >>> namesRegex.sub('REDACTED', "Agent Alice gave all the documents to Agent Bob.")
+        'REDACTED gave all the documents to REDACTED.'
+
+  - Using \1, \2 and so will substitute group 1, 2, etc in the regex pattern.
+
+        >>> namesRegex = re.compile(r'Agent (\w)\w*')
+        >>> namesRegex.findall("Agent Alice gave all the documents to Agent Bob.")
+        ['A', 'B']
+
+        >>> namesRegex.sub(r'Agent \1****', "Agent Alice gave all the documents to Agent Bob.")
+        'Agent A**** gave all the documents to Agent B****.
+
+- Passing re.VERBOSE lets you **add whitespace and comments to the regex string passed to re.compile()**.
+
+
+- If you want to pass multiple arguments (re.DOTALL , re.IGNORECASE, re.VERBOSE), combine them with the | bitwise operator.
+
+        phoneNumRegex = (r'''
+        (\d\d\d-)|      # area-code (w/o paren with dash)
+        (\(\d\d\d\) )   # -or- area-code (with parenand no dash)
+        \d\d\d          # first 3 digits
+        -               # second dash
+        \d\d\d\d        # last 4 digits
+        \sx\d{2,4}      # space and extension''', re.VERBOSE | re.IGNORECASE | re.DOTALL)
