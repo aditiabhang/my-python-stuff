@@ -17,7 +17,7 @@
 - os.path.exists() returns True if the filename passed to it exists.
 - os.path.isfile() and os.path.isdir() return True if they were passed a filename or file path.
 
-#--------------------------------------------------------------------
+-------------------------------------------------------------
 
 ### Reading & writing plain text files:
 
