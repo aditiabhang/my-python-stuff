@@ -16,3 +16,16 @@
 - os.listdir() returns a list of strings of filenames.
 - os.path.exists() returns True if the filename passed to it exists.
 - os.path.isfile() and os.path.isdir() return True if they were passed a filename or file path.
+
+#--------------------------------------------------------------------
+
+### Reading & writing plain text files:
+
+- The **open()** function will return a file object which has reading and writing –related methods.
+- Pass *‘r'* (or nothing) to open() to open the file in read mode. Pass **‘w'** for write mode. Pass **‘a'** for append mode.
+- Opening a nonexistent filename in write or append mode will create that file.
+- Call **read()** or **write()** *to read the contents of a file or write a string to a file.
+- Call **readlines()** to return a list of strings of the file's content.
+- Call **close()** when you are done with the file.
+- The shelve module can store Python values in a binary file.
+- The **shelve.open()** function returns a dictionary-like shelf value.
