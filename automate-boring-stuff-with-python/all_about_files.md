@@ -78,4 +78,4 @@
 - **os.rmdir()** will delete a folder (but the folder must be empty).
 - **shutil.rmtree()** will delete a folder and *all its contents*.
 - Deleting can be dangerous, so do a "dry run" first.
-- **send2trash.send2trash()** will send a file or folder to the recycling bin.
+- First we import send2trash, and then **send2trash.send2trash()** will send a file or folder to the recycling bin.
