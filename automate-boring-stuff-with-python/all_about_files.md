@@ -79,3 +79,15 @@
 - **shutil.rmtree()** will delete a folder and *all its contents*.
 - Deleting can be dangerous, so do a "dry run" first.
 - First we import send2trash, and then **send2trash.send2trash()** will send a file or folder to the recycling bin.
+
+-------------------------------------------------------------
+
+### Walking through the directory
+
+- We use **os.walk()** module.
+
+        >>> for folderName, subFolders, fileName in os.walk('/Users/aditiabhang/My_Workspace/Python/my-python-stuff/automate-boring-stuff-with-python'):
+        ...     print("Folder Name is " + folderName)
+        ...     print("The sub folders in " + folderName + " are: " + str(subFolders))
+        ...     print("The file names in " + folderName + " are " + str(fileName))
+        ...     print()
